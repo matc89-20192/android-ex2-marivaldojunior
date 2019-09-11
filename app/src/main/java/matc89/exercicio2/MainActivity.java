@@ -19,4 +19,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this,OutraActivity.class);
         startActivityForResult(intent,1234);
     }
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        if(requestCode == 1234 && resultCode == RESULT_OK){
+            textView.setText(data.get("usuario"));
+        }
+    }
 }
