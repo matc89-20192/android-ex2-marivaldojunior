@@ -1,14 +1,19 @@
 package matc89.exercicio2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 public class OutraActivity extends AppCompatActivity {
-
+    EditText editText;
+    Button btnConfirmar;
+    Button btnCancelar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +30,16 @@ public class OutraActivity extends AppCompatActivity {
             }
         });
 
+    }
+    public void confirmar(View v){
+        Intent data = new Intent();
+        data.putExtra("usuario",editText.getText());
+        setResult(RESULT_OK, data);
+        finish();
+    }
+    public void cancelar (View v){
+        setResult(RESULT_CANCELED);
+        finish();
     }
 
 }
