@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     }
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
         if(requestCode == 1234 && resultCode == RESULT_OK){
-            textView.setText(data.get("usuario"));
+            textView.setText(data.getStringExtra("usuario"));
         }
     }
 }
