@@ -14,6 +14,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+btnTrocar = (Button)findViewById(R.id.btnTrocar);
+        textView = (TextView)findViewById(R.id.textView);
+
     }
     public void trocarUsuario (View v){
         Intent intent = new Intent(this,OutraActivity.class);
