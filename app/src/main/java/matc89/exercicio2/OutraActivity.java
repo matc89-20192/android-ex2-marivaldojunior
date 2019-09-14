@@ -29,7 +29,9 @@ public class OutraActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-
+        btnConfirmar = (Button)findViewById(R.id.btnConfirmar);
+        editText = (EditText)findViewById(R.id.editText);
+        btnCancelar = (Button)findViewById(R.id.btnCancelar);
     }
     public void confirmar(View v){
         Intent data = new Intent();
